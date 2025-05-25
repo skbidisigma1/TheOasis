@@ -1,0 +1,58 @@
+@font-face{font-family:'Poppins';src:url('/src/assets/fonts/poppins/poppins-v23-latin-regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Poppins';src:url('/src/assets/fonts/poppins/poppins-v23-latin-600.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Poppins';src:url('/src/assets/fonts/poppins/poppins-v23-latin-700.woff2') format('woff2');font-weight:700;font-display:swap}
+
+:root{
+  --color-bg:#fefdfa;
+  --color-bg-alt:#f7f5ef;
+  --color-bg-header:rgba(254,253,250,.9);
+  --color-primary:#c89b4f;
+  --color-accent:#e08a70;
+  --color-sage:#97b88a;
+  --color-dark:#2d2920;
+  --color-light:#ffffff;
+  --color-neutral-100:#fbfaf8;
+  --color-neutral-200:#f0ede7;
+  --color-neutral-300:#e4e0d8;
+  --color-neutral-700:#2d2920;
+  --color-neutral-900:#1a1612;
+
+  --font-family-primary:'Poppins',sans-serif;
+  --fw-regular:400;--fw-medium:600;--fw-bold:700;
+
+  --fs-sm:.875rem;--fs-base:1rem;--fs-lg:1.25rem;--fs-xl:1.5rem;--fs-2xl:1.875rem;--fs-3xl:2.25rem;--fs-4xl:2.75rem;
+
+  --lh-tight:1.2;--lh-normal:1.6;--lh-relaxed:1.8;
+
+  --rad-sm:.3rem;--rad-md:.6rem;--rad-lg:.9rem;--rad-full:9999px;
+
+  --space-sm:.6rem;--space-md:1.2rem;--space-lg:1.8rem;--space-xl:2.5rem;--space-2xl:3.75rem;--space-3xl:5rem;
+
+  --shadow-sm:0 2px 5px rgba(74,68,60,.06);
+  --shadow-md:0 5px 15px rgba(74,68,60,.09);
+  --shadow-lg:0 12px 25px rgba(74,68,60,.11);
+
+  --trans-fast:.15s ease-out;--trans-med:.25s ease-out;
+
+  --container-max:75rem;
+
+  --gradient-oasis:linear-gradient(135deg,var(--color-accent)0%,var(--color-primary)100%);
+  --gradient-bg:linear-gradient(180deg,var(--color-bg)0%,var(--color-bg-alt)100%);
+  --gradient-hero:linear-gradient(135deg,var(--color-sage)0%,var(--color-bg-alt)100%);
+
+  --z-sticky:20;--z-float:30;
+}
+
+@media(prefers-color-scheme:dark){
+ :root{
+  --color-bg:#1e1c19;--color-bg-alt:#25231f;
+  --color-bg-header:rgba(30,28,25,.9);
+  --color-primary:#d4a574;--color-accent:#f4a088;--color-sage:#a5c597;
+  --color-dark:#f5f4f1;--color-light:#1e1c19;
+  --color-neutral-100:#25231f;--color-neutral-200:#3a362f;--color-neutral-300:#4a443c;
+  --color-neutral-700:#c2c0bc;--color-neutral-900:#f5f4f1;
+  --shadow-sm:0 2px 5px rgba(0,0,0,.4);
+  --shadow-md:0 5px 15px rgba(0,0,0,.5);
+  --shadow-lg:0 12px 25px rgba(0,0,0,.6);
+ }
+}

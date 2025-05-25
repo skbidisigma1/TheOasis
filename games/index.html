@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Games at The Oasis" />
+  <title>Games – The Oasis</title>
+
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/tokens.css" />
+  <link rel="stylesheet" href="/src/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="/">The&nbsp;Oasis</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="/"         class="nav__link">Home</a></li>
+        <li><a href="/games"    class="nav__link">Games</a></li>
+        <li><a href="/about"    class="nav__link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero--sub">
+    <div class="container">
+      <h1 class="hero__title">Game Library</h1>
+      <p class="hero__tagline">Lightweight, ad‑free games running entirely in your browser.</p>
+
+      <div id="filterBar" class="filter">
+        <button class="filter__chip" data-filter="all"     aria-pressed="true">All</button>
+        <button class="filter__chip" data-filter="action">Action</button>
+        <button class="filter__chip" data-filter="puzzle">Puzzle</button>
+        <button class="filter__chip" data-filter="strategy">Strategy</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--alt">
+    <div class="container">
+      <div id="gamesGrid" class="grid grid--wide"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 The Oasis</p>
+</footer>
+
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

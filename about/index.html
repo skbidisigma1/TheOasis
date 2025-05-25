@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="About The Oasis" />
+  <title>About – The Oasis</title>
+
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/tokens.css" />
+  <link rel="stylesheet" href="/src/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="/">The&nbsp;Oasis</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="/"         class="nav__link">Home</a></li>
+        <li><a href="/games"    class="nav__link">Games</a></li>
+        <li><a href="/about"    class="nav__link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero hero--sub">
+    <div class="container">
+      <h1 class="hero__title">Our Journey</h1>
+      <p class="hero__tagline">From humble side‑project to privacy‑first playground.</p>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <div class="container timeline__grid">
+      <div class="timeline__item">
+        <h2 class="timeline__year">2024</h2>
+        <p>Drafted Oasis principles: zero tracking, local files, open source.</p>
+      </div>
+      <div class="timeline__item">
+        <h2 class="timeline__year">2025</h2>
+        <p>Public launch, CSP‑locked build, community translations.</p>
+      </div>
+      <div class="timeline__item">
+        <h2 class="timeline__year">Future</h2>
+        <p>More titles, dark mode switcher, self‑host toolkit.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 The Oasis</p>
+</footer>
+
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

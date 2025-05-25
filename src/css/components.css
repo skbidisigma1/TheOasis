@@ -1,0 +1,104 @@
+/* nav */
+.nav-list{display:flex;gap:var(--space-3)}
+.nav-link{position:relative;padding:var(--space-1) var(--space-2);border-radius:9999px;font-weight:600;color:var(--color-dark);transition:color var(--trans-fast)}
+.nav-link::after{content:'';position:absolute;inset:0;border-radius:9999px;background:linear-gradient(90deg,var(--color-accent),var(--color-primary));opacity:0;transition:opacity var(--trans-fast);z-index:-1}
+.nav-link:hover,.nav-link:focus-visible{color:var(--color-light)}
+.nav-link:hover::after,.nav-link:focus-visible::after{opacity:1}
+.nav-link--active{color:var(--color-light)}
+.nav-link--active::after{opacity:1}
+
+/* button */
+.oasis-button{
+     display:inline-flex;
+     align-items:center;
+     justify-content:center;
+     padding: var(--space-md) var(--space-lg); /* Increased padding */
+     border-radius:var(--rad-md);
+     background:var(--gradient-oasis);
+     color:var(--color-light);
+     font-weight:var(--font-weight-medium);
+     text-decoration: none;
+     border: none;
+     cursor: pointer;
+     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+ }
+ .oasis-button:hover, .oasis-button:focus-visible {
+     transform:translateY(-2px);
+     box-shadow:var(--shadow-md); /* Use new shadow */
+ }
+ .oasis-button:active {
+    transform: translateY(0px);
+    box-shadow: var(--shadow-sm);
+ }
+
+/* card */
+.card{
+     background:var(--color-light);
+     border-radius:var(--rad-lg);
+     box-shadow:var(--shadow-md);
+     padding:var(--space-xl); /* Increased padding */
+     display:flex;
+     flex-direction:column;
+     gap:var(--space-lg); /* Increased gap */
+     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smoother transition */
+     overflow: hidden; /* Ensure content respects border-radius */
+ } .card:hover{
+     transform:translateY(-2px); /* Reduced from -4px for subtler effect */
+     box-shadow:var(--shadow-lg);
+ }
+ .card-img{
+     border-radius:var(--rad-sm); /* Slightly smaller radius for image inside card */
+     aspect-ratio:16/9;
+     object-fit:cover;
+     width:100%;
+     opacity:.95;
+     transition:opacity var(--trans-fast);
+ }
+ .card:hover .card-img{
+     opacity:1;
+ }
+ .card-title{
+     font-size:var(--font-size-lg); /* Use new font size */
+     font-weight:var(--font-weight-bold); /* Use new font weight */
+     color:var(--color-primary); /* Use primary color for card titles */
+     line-height: var(--line-height-tight);
+ } .card-desc{
+     font-size:var(--font-size-sm); /* Use new font size */
+     color: var(--color-dark); /* Darker for better contrast */
+     line-height: var(--line-height-normal);
+     flex-grow: 1; /* Allow description to take available space */
+ }
+ .card-actions { /* Optional: for buttons or links within a card */
+    margin-top: auto; /* Pushes actions to the bottom */
+    padding-top: var(--space-md);
+ }
+
+/* filters */
+.filter-bar{
+     display:flex;
+     flex-wrap:wrap;
+     gap:var(--space-md); /* Increased gap */
+     margin-block:var(--space-lg); 
+     align-items: center;
+     justify-content: center;
+ } .filter-chip{
+     padding: var(--space-sm) var(--space-lg); /* Increased padding */
+     border-radius:var(--rad-full);
+     background: var(--color-neutral-200);
+     color: var(--color-dark);
+     font-size:var(--font-size-sm);
+     font-weight: var(--font-weight-medium);
+     cursor:pointer;
+     border: 1px solid var(--color-neutral-300);
+     transition: background-color var(--trans-fast), color var(--trans-fast), border-color var(--trans-fast);
+ }
+ .filter-chip:hover{
+     background: var(--color-sage);
+     color:var(--color-light);
+     border-color: var(--color-sage);
+ }
+.filter-chip[aria-pressed="true"]{
+     background:var(--color-primary);
+     color:var(--color-light);
+     border-color: var(--color-primary);
+}

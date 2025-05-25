@@ -1,0 +1,126 @@
+body{
+ display:flex;flex-direction:column;min-height:100vh;
+ font:var(--font-weight-regular) var(--font-size-base)/var(--line-height-normal) var(--font-family-primary); /* Use new vars */
+ color:var(--color-dark);background:var(--gradient-bg); /* Use new gradient */
+}
+
+.container{width:min(90%,var(--container-max-width));margin-inline:auto;padding-inline:var(--container-padding)} /* Use new vars */
+
+.section{padding-block:var(--space-2xl) var(--space-3xl)} /* Use new spacing vars */
+.section--alt{background:var(--color-bg-alt)} /* Use new alt background color */
+
+/* header & footer */
+.site-header{
+    position:sticky;top:0;z-index:var(--z-sticky); /* Use new z-index */
+    background:var(--color-bg);background:var(--color-bg-header);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--color-neutral-200); /* Use new neutral color */
+    box-shadow: var(--shadow-sm); /* Add subtle shadow */
+}
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-block:var(--space-md); /* Reverted to normal height */
+    gap: var(--space-lg); /* Add gap for items */
+}
+.site-footer{
+    margin-top:auto;
+    background:var(--color-dark);
+    color: var(--color-neutral-200); /* Lighter text for better contrast on dark bg */
+    padding-block:var(--space-xl); /* Use new spacing */
+    text-align:center;
+    font-size: var(--font-size-sm);
+}
+.site-footer a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+.site-footer a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+
+/* hero */
+.section--hero{
+    text-align:center;
+    background: var(--gradient-sage-soft); /* Use new sage gradient */
+    color:var(--color-dark); /* Light text on gradient */
+    padding-block: var(--space-3xl) var(--space-4xl); 
+    border-bottom-left-radius: var(--rad-lg);
+    border-bottom-right-radius: var(--rad-lg);
+}
+.hero-title{
+    font-size:clamp(var(--font-size-2xl), 6vw, var(--font-size-4xl)); 
+    font-weight:var(--font-weight-bold);
+    margin-bottom:var(--space-lg); 
+    line-height: var(--line-height-tight);
+    color: var(--color-dark); /* Ensure title is dark for sage gradient */
+}
+.hero-description{
+    max-width:55ch; /* Slightly wider for readability */
+    margin-inline:auto;
+    margin-bottom:var(--space-xl); /* Use new spacing */
+    font-size: var(--font-size-md); /* Use new font size */
+    line-height: var(--line-height-relaxed);
+    opacity: 0.9; /* Slightly transparent description */
+}
+
+/* grids */
+.features-grid{
+    display:grid;
+    gap:var(--space-lg); /* Use new spacing */
+    grid-template-columns:repeat(auto-fit,minmax(min(100%, 18rem),1fr)); /* Responsive columns */
+}
+.showcase-grid{
+    display:grid;
+    gap:var(--space-xl); /* Use new spacing */
+    grid-template-columns:repeat(auto-fit,minmax(min(100%, 20rem),1fr)); /* Responsive columns */
+}
+
+/* misc sections */
+.section-title{ /* This is also defined in main.css, ensure consistency or remove one */
+    font-size:var(--font-size-2xl); /* Use new font size */
+    font-weight:var(--font-weight-bold);
+    color: var(--color-primary);
+    margin-bottom:var(--space-xl); /* Use new spacing */
+    text-align: center;
+}
+.how-text{max-width:65ch;margin-inline:auto; font-size: var(--font-size-md); line-height: var(--line-height-relaxed);}
+.cta-section{text-align:center; padding-block: var(--space-3xl);} /* Use new spacing */
+.cta-section .oasis-button { /* Style for button specifically in CTA */
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-size-md);
+}
+
+/* canvas */
+.hero-canvas{display:block;width:100%;height:auto;opacity:.08;pointer-events:none}
+
+/* timeline */
+.timeline-grid{
+    display:grid;
+    gap:var(--space-lg); /* Use new spacing */
+    max-width: 70ch; /* Constrain width for readability */
+    margin-inline: auto; /* Center timeline */
+}
+.timeline-item{
+    padding:var(--space-lg); 
+    border-left:4px solid var(--color-sage); /* Use sage for border */
+    background-color: var(--color-bg-alt); 
+    border-radius: var(--rad-md); 
+    box-shadow: var(--shadow-sm);
+}
+.timeline-item h3 { 
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-sage); /* Use sage for timeline titles */
+    margin-bottom: var(--space-sm);
+}
+.timeline-item p { /* Example styling for timeline item text */
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    line-height: var(--line-height-normal);
+}

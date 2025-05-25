@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="The Oasis – privacy‑first browser gaming." />
+  <title>The Oasis</title>
+
+  <link rel="stylesheet" href="/src/css/reset.css" />
+  <link rel="stylesheet" href="/src/css/tokens.css" />
+  <link rel="stylesheet" href="/src/css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="brand" href="/">The&nbsp;Oasis</a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu" aria-controls="primary-nav">
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="/"         class="nav__link">Home</a></li>
+        <li><a href="/games"    class="nav__link">Games</a></li>
+        <li><a href="/about"    class="nav__link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="hero-canvas" class="hero__canvas" width="1280" height="720"></canvas>
+    <div class="container hero__content">
+      <h1 class="hero__title">Gaming without compromise</h1>
+      <p class="hero__tagline">
+        <span id="heroText">No tracking, no ads, no nonsense. Pure local gameplay.</span>
+        <span class="typing-cursor" aria-hidden="true">|</span>
+      </p>
+      <a class="btn btn--primary" href="/games">Explore&nbsp;Games</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container grid">
+      <article class="card" data-fade>
+        <img src="/src/assets/images/performance.jpg" alt="" class="card__img" />
+        <h2 class="card__title">Performance First</h2>
+        <p class="card__text">Vanilla code, zero bloat, instant loads.</p>
+      </article>
+
+      <article class="card" data-fade>
+        <img src="/src/assets/images/privacy.jpg" alt="" class="card__img" />
+        <h2 class="card__title">Privacy Locked</h2>
+        <p class="card__text">No telemetry, cookies, or third‑party scripts.</p>
+      </article>
+
+      <article class="card" data-fade>
+        <img src="/src/assets/images/security.jpg" alt="" class="card__img" />
+        <h2 class="card__title">Security Built‑in</h2>
+        <p class="card__text">Hardened CSP, local assets, safe defaults.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="showcase">
+    <div class="container">
+      <h2 class="section-title">Featured Games</h2>
+      <div class="grid grid--wide">
+        <article class="card">
+          <img src="/src/assets/games/game1/cover.jpg" alt="Desert Runner" class="card__img" />
+          <h3 class="card__title">Desert Runner</h3>
+          <p class="card__text">Endless‑runner through shifting sands.</p>
+          <button class="btn btn--disabled" disabled>Coming Soon</button>
+        </article>
+        <article class="card">
+          <img src="/src/assets/games/game2/cover.jpg" alt="Oasis Tactics" class="card__img" />
+          <h3 class="card__title">Oasis Tactics</h3>
+          <p class="card__text">Turn‑based strategy beneath palm shadows.</p>
+          <button class="btn btn--disabled" disabled>Coming Soon</button>
+        </article>
+        <article class="card">
+          <img src="/src/assets/games/game3/cover.jpg" alt="Mirror Maze" class="card__img" />
+          <h3 class="card__title">Mirror Maze</h3>
+          <p class="card__text">Mind‑bending puzzles in crystal caverns.</p>
+          <button class="btn btn--disabled" disabled>Coming Soon</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2 class="section-title">Ready to play?</h2>
+      <a class="btn btn--primary" href="/games">Browse Library</a>
+    </div>
+  </section>
+</main>
+
+<button id="scrollToTop" class="scroll-top" aria-label="Scroll to top">
+  ↑
+</button>
+
+<footer class="site-footer">
+  <p>&copy; 2025 The Oasis</p>
+</footer>
+
+<script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
